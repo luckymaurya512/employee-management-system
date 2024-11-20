@@ -1,10 +1,10 @@
 import React, { useContext, useState } from 'react';
 import { AuthContext } from '../../context/AuthProvider';
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+// import { ToastContainer, toast } from 'react-toastify';
+// import 'react-toastify/dist/ReactToastify.css';
 
 const CreateTask = () => {
-  const notify = () => toast("Task Assigned");
+  // const notify = () => toast("Task Assigned");
   const [userData, setUserData] = useContext(AuthContext);
   const [taskTitle, setTaskTitle] = useState('');
   const [taskDescription, setTaskDescription] = useState('');
@@ -102,22 +102,10 @@ const CreateTask = () => {
             onChange={(e) => setTaskDescription(e.target.value)}
             className='w-full h-44 text-sm py-2 px-4 rounded outline-none bg-transparent border-[1px] border-gray-400 transform transition-all duration-300 hover:scale-105 hover:shadow-md'
           ></textarea>
-          <button onClick={notify} className='bg-emerald-500 py-3 hover:bg-emerald-600 px-5 rounded text-sm mt-4 w-full transform transition-all duration-300 hover:scale-105 hover:shadow-lg'>
+          <button  className='bg-emerald-500 py-3 hover:bg-emerald-600 px-5 rounded text-sm mt-4 w-full transform transition-all duration-300 hover:scale-105 hover:shadow-lg'>
             Create Task
           </button>
-          <ToastContainer
-            position="top-right"
-            autoClose={5000}
-            hideProgressBar={false}
-            newestOnTop={false}
-            closeOnClick
-            rtl={false}
-            pauseOnFocusLoss
-            draggable
-            pauseOnHover
-            theme="dark"
-            style={{ fontSize: '16px', color: '#ff6347' }} // Custom font color for toast
-          />
+          
         </div>
       </form>
     </div>
